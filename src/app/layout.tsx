@@ -1,21 +1,22 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Red_Hat_Text, Red_Hat_Mono } from 'next/font/google';
+import './globals.css';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const redHat = Red_Hat_Text({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-red',
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const redHatMono = Red_Hat_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-red-mono',
 });
 
 export const metadata: Metadata = {
   title: "Anthony Merino's Profile",
-  description: "Home of 303Dev Projects",
+  description: 'Home of 303Dev Projects',
 };
 
 export default function RootLayout({
@@ -24,12 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang='en'
+      className={redHat.className}>
+      <body>{children}</body>
     </html>
   );
 }
