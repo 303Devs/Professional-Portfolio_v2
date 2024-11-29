@@ -1,0 +1,9 @@
+# Ignore build and cache directories
+/node_modules
+/.next
+/public
+/.vscode
+
+# Ignore generated or unnecessary files
+next-env.d.ts
+LICENSE
