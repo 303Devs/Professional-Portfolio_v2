@@ -40,8 +40,14 @@ const config = {
         },
         blue: {
           '100': '#E4ECFF',
+          '200': '#A5E1FF',
+          '300': '#62D0FF',
         },
-        purple: '#CBACF9',
+        purple: {
+          '100': '#CBACF9',
+          '200': '#E0B3FF',
+          '900': '#0F0920',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -162,7 +168,7 @@ const config = {
       },
       fontFamily: {
         sans: ['var(--font-red)'],
-        monoo: ['var(--font-red-mono)'],
+        mono: ['var(--font-red-mono)'],
       },
     },
   },

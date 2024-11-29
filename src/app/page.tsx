@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Hero from '../components/Hero';
 
 const Home = () => {
   return (
-    <div className='flex justify-center items-center h-screen'>
-      <h1 className='font-semibold text-3xl'>
-        Welcome to the future home of 303Dev...
-      </h1>
-    </div>
-  )
-}
+    <main>
+      <div>
+        <Hero />
+      </div>
+    </main>
+  );
+};
 
-export default Home
+export default Home;

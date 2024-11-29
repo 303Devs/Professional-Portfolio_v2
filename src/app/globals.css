@@ -36,7 +36,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 263 46% 8%;
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -81,9 +81,5 @@
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
-  }
-
-  .black-gradient {
-    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
