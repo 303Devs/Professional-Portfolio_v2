@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import { FloatingNav } from '@/components/ui/FloatingNav';
+import { FloatingNav } from '@/components/ui';
+import { Hero, Grid } from '@/components';
 import { navItems } from '@/data';
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
       <div className='max-w-7xl w-full'>
         <FloatingNav navItems={navItems} />
         <Hero />
+        <Grid />
       </div>
     </main>
   );
