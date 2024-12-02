@@ -9,14 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^9.118.0",
-    "@react-three/fiber": "^8.17.10",
     "@types/react-lottie": "^1.2.10",
     "babel-runtime": "^6.26.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.12.0",
+    "dotted-map": "^2.2.3",
     "i": "^0.3.7",
     "mini-svg-data-uri": "^1.4.4",
+    "motion": "^12.0.0-alpha.2",
     "next": "15.0.3",
     "next-themes": "^0.4.3",
     "npm": "^10.9.1",
@@ -26,9 +25,7 @@
     "react-lottie": "^1.2.9",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7",
-    "three": "^0.171.0",
-    "three-globe": "^2.35.2"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

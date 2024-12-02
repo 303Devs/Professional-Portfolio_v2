@@ -11,3 +11,4 @@ export { default as MagicButton } from './magic-button';
 export { Spotlight as Spotlight } from './spotlight';
 export { TextGenerateEffect as TextGenerate } from './text-generate-effect.tsx';
 export { Vortex as Vortex } from './vortex';
+export { WorldMap as WorldMap } from './world-map';

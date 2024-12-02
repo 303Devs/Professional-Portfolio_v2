@@ -68,3 +68,56 @@ export const gridItems = [
     spareImg: '',
   },
 ];
+
+export const mapDots = [
+  {
+    start: {
+      lat: 64.2008,
+      lng: -149.4937,
+    }, // Alaska (Fairbanks)
+    end: {
+      lat: 34.0522,
+      lng: -118.2437,
+    }, // Los Angeles
+  },
+  {
+    start: { lat: 34.0522, lng: -118.2437 }, // Los Angeles
+    end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+  },
+  {
+    start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+    end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+  },
+  {
+    start: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+    end: { lat: 51.5074, lng: -0.1278 }, // London
+  },
+  {
+    start: { lat: 51.5074, lng: -0.1278 }, // London
+    end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+  },
+  {
+    start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+    end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+  },
+  {
+    start: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+    end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+  },
+  {
+    start: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+    end: { lat: 40.014984, lng: -105.270546 }, // Boulder, CO
+  },
+  {
+    start: { lat: 40.014984, lng: -105.270546 }, // Boulder, CO
+    end: { lat: -33.865143, lng: 151.2099 }, // Sydney
+  },
+  {
+    start: { lat: -33.865143, lng: 151.2099 }, // Sydney
+    end: { lat: -33.447487, lng: -70.673676 }, // Santiago
+  },
+  {
+    start: { lat: -33.447487, lng: -70.673676 }, // Santiago
+    end: { lat: 64.2008, lng: -149.4937 }, // Fairbanks
+  },
+];

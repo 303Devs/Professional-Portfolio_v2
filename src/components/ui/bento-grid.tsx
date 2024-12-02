@@ -12,7 +12,9 @@ import {
   EvervaultCard,
   GlowingStars,
   MagicButton,
+  WorldMap,
 } from './';
+import { mapDots } from '@/data';
 import { IoCopyOutline } from 'react-icons/io5';
 
 export const BentoGrid = ({
@@ -81,7 +83,6 @@ export const BentoGridItem = ({
       style={{
         background: 'rgb(4,7,29)',
         backgroundColor: 'linear-gradient(145deg, #4A3B87, #1E1648)',
-        // 'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)',
       }}>
       <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className='w-full h-full absolute'>
@@ -107,6 +108,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+        {id === 2 && <WorldMap dots={mapDots} />}
         {id === 3 && <EvervaultCard className='absolute' />}
         {id === 4 && <GlowingStars className='absolute z-10' />}
         {id === 5 && (
