@@ -1,6 +1,8 @@
 import React from 'react';
-import { FloatingNav } from '@/components/ui';
-import { Hero, Grid } from '@/components';
+import FloatingNav from '@/components/ui/floating-nav';
+import Grid from '@/components/Grid';
+import Hero from '@/components/Hero';
+import RecentProjects from '@/components/RecentProjects';
 import { navItems } from '@/data';
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <RecentProjects />
       </div>
     </main>
   );

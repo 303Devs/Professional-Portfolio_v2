@@ -1,5 +1,7 @@
-import { Spotlight } from './ui';
-import { TextGenerate, MagicButton, Vortex } from './ui';
+import { Spotlight } from './ui/spotlight';
+import VortexWrapper from './ui/vortex-wrapper';
+import { TextGenerate } from './ui/text-generate.tsx';
+import MagicButton from './ui/magic-button';
 import { FaLocationArrow } from 'react-icons/fa';
 
 const Hero = () => {
@@ -23,11 +25,7 @@ const Hero = () => {
       <div className='h-screen w-full dark:bg-purple-900 bg-neutral-50 dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0'>
         <div className='absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-purple-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]' />
       </div>
-      <Vortex
-        backgroundColor='transparent'
-        rangeY={800}
-        particleCount={500}
-        className='flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full bg-transparent'>
+      <VortexWrapper>
         <div className='flex justify-center relative my-10 sm:my-20 z-10'>
           <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
             <h2 className='uppercase tracking-widest text-xs text-center max-w-80 subpixel-antialiased'>
@@ -51,7 +49,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-      </Vortex>
+      </VortexWrapper>
     </div>
   );
 };

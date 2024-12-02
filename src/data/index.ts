@@ -121,3 +121,38 @@ export const mapDots = [
     end: { lat: 64.2008, lng: -149.4937 }, // Fairbanks
   },
 ];
+
+export const projectItems = [
+  {
+    id: 1,
+    title: 'Pariatur Ut Ex Lorem et Voluptate',
+    des: 'Elit eu nulla minim pariatur dolor nulla nostrud amet nisi quis in pariatur consequa.',
+    img: '/p1.svg',
+    icons: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/fm.svg'],
+    link: 'https://anthonymerino.dev',
+  },
+  {
+    id: 2,
+    title: 'Consequat - Aliquip Quis Labori',
+    des: 'Consectetur reprehenderit lorem sed ut nostrud lorem labore veniam incididunt dolo.',
+    img: '/p2.svg',
+    icons: ['/next.svg', '/tail.svg', '/ts.svg', '/stream.svg', '/c.svg'],
+    link: 'https://anthonymerino.dev',
+  },
+  {
+    id: 3,
+    title: 'In Exercitation - Esse Commodo Dolo',
+    des: 'Nisi voluptate consectetur adipiscing commodo ullamco ipsum in consequat nisi ullamco commodo in cillum.',
+    img: '/p3.svg',
+    icons: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/c.svg'],
+    link: 'https://anthonymerino.dev',
+  },
+  {
+    id: 4,
+    title: 'Incididunt Ipsum ea Eiusmod Exer',
+    des: 'Velit cillum reprehenderit commodo labore magna dolore nostrud in commodo minim ad dolor do',
+    img: '/p4.svg',
+    icons: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
+    link: 'https://anthonymerino.dev',
+  },
+];

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
-export const GlowingStarsBackgroundCard = ({
+export const GlowingStars = ({
   className,
   children,
 }: {

@@ -2,20 +2,19 @@
 
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-// import { GridGlobe } from '@/components/ui';
 import Image from 'next/image';
+// import dynamic from 'next/dynamic';
 import Lottie from 'react-lottie';
 import animationData from '@/data/confetti.json';
-import {
-  BackgroundBeams,
-  BackgroundGradient,
-  EvervaultCard,
-  GlowingStars,
-  MagicButton,
-  WorldMap,
-} from './';
-import { mapDots } from '@/data';
+import MagicButton from './magic-button';
+import { GlowingStars } from './glowing-stars';
+import { EvervaultCard } from './evervault-card';
+import { BackgroundGradient } from './gradient-bg';
+import { BackgroundBeams } from './beams-bg';
+// import { mapDots } from '@/data';
 import { IoCopyOutline } from 'react-icons/io5';
+
+// const Map = dynamic(() => import('./world-map'), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -108,7 +107,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 2 && <WorldMap dots={mapDots} />}
+        {/* {id === 2 && <Map dots={mapDots} />} */}
         {id === 3 && <EvervaultCard className='absolute' />}
         {id === 4 && <GlowingStars className='absolute z-10' />}
         {id === 5 && (
@@ -132,12 +131,11 @@ export const BentoGridItem = ({
           <div className='font-sans font-bold lg:font-semibold text-lg lg:text-3xl max-w-96 z-10'>
             {title}
           </div>
-          {/* {id === 2 && <GridGlobe />} */}
 
           {id === 3 && (
             <div className='flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2'>
               {/* tech stack lists */}
-              <div className='flex flex-col gap-3 md:gap-3 lg:gap-8 overflow-scroll'>
+              <div className='flex flex-col gap-3 lg:gap-7'>
                 {leftStackList.map((item, i) => (
                   <span
                     key={i}
@@ -147,7 +145,7 @@ export const BentoGridItem = ({
                 ))}
                 <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-purple-900'></span>
               </div>
-              <div className='flex flex-col gap-3 md:gap-3 lg:gap-8 overflow-scroll'>
+              <div className='flex flex-col gap-3 lg:gap-7'>
                 <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-purple-900'></span>
                 {rightStackList.map((item, i) => (
                   <span
