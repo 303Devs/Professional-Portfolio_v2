@@ -13,7 +13,7 @@ export const gridItems = [
     className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
     imgClassName: 'h-full w-full ',
     titleClassName: 'justify-end',
-    img: '/vision7.webp',
+    img: '/vision.webp',
     spareImg: '',
   },
   {
@@ -191,10 +191,24 @@ export const projectItems = [
   },
   {
     id: 7,
-    title: 'Design It. Wear It.',
+    title: 'Bashful Elephant: Design It. Wear It.',
     des: 'Turn your ideas into wearable art! Describe your vision, and let AI craft stunning designs applied to 3D t-shirt models—your style, your way.',
     img: '/bashful-elephant.webp',
     icons: ['/next.svg', '/tail.svg', '/ts.svg', '/openai.webp', '/three.svg'],
     link: 'https://anthonymerino.dev',
+  },
+  {
+    id: 8,
+    title: 'Buckets: Smarter Investing with DeFi',
+    des: 'Buckets is a DeFi platform that empowers smarter investments with AI tools and unique digital assets, combining transparency, security, and innovation.',
+    img: '/buckets.webp',
+    icons: [
+      '/re.svg',
+      '/web3js.webp',
+      '/eth.webp',
+      '/solidity.webp',
+      '/ganache.webp',
+    ],
+    link: 'https://buckets.fi',
   },
 ];
