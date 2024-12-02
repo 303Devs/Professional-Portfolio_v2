@@ -111,7 +111,7 @@ export const BentoGridItem = ({
         {id === 4 && <GlowingStars className='absolute z-10' />}
         {id === 5 && (
           <BackgroundBeams className='absolute max-h-full bg-transparent'>
-            {' '}
+            {''}
           </BackgroundBeams>
         )}
         {id === 6 && (

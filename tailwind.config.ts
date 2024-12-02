@@ -46,6 +46,7 @@ const config = {
         purple: {
           '100': '#CBACF9',
           '200': '#E0B3FF',
+          '800': '#857B2',
           '900': '#0F0920',
         },
         border: 'hsl(var(--border))',
