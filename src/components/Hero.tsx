@@ -1,4 +1,4 @@
-import { Spotlight } from './ui/spotlight';
+import Spotlight from './ui/spotlight';
 import VortexWrapper from './ui/vortex-wrapper';
 import { TextGenerate } from './ui/text-generate.tsx';
 import MagicButton from './ui/magic-button';
