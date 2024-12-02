@@ -41,7 +41,7 @@ const RecentProjects = () => {
               title={project.link}
               href={project.link}>
               <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
-                <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
+                <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%]'>
                   <Image
                     src='/bg.png'
                     alt='bg-img'
@@ -52,7 +52,7 @@ const RecentProjects = () => {
                 <Image
                   src={project.img}
                   alt={project.title}
-                  className='z-10 absolute bottom-0'
+                  className='z-10 absolute bottom-0 rotate-3 w-fit h-full'
                   width={384}
                   height={384}
                 />
@@ -61,7 +61,7 @@ const RecentProjects = () => {
                 {project.title}
               </h2>
               <p
-                className='className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2'
+                className='className="lg:text-xl lg:font-normal font-light text-sm line-clamp-3'
                 style={{
                   color: '#BEC1DD',
                   margin: '1vh 0',
@@ -80,7 +80,7 @@ const RecentProjects = () => {
                       <Image
                         src={icon}
                         alt={icon}
-                        className='p-2'
+                        className='p-2 rounded-full'
                         width={40}
                         height={40}
                       />
