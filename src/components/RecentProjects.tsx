@@ -40,7 +40,7 @@ const RecentProjects = () => {
             <PinContainer
               title={project.link}
               href={project.link}>
-              <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
+              <div className='relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden sm:h-[h-[20vh] h-[30vh] mb-10'>
                 <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%]'>
                   <Image
                     src='/bg.png'
@@ -73,7 +73,7 @@ const RecentProjects = () => {
                   {project.icons.map((icon, i) => (
                     <li
                       key={icon}
-                      className='border border-neutral[0.2] rounded-full bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] lg:w-10 lg:h-10 sm:w-8 sm:h-8 flex justify-center items-center transition-colors'
+                      className='border border-neutral[0.2] rounded-full bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center transition-colors'
                       style={{
                         transform: `translateX(-${5 * i * 2}px)`,
                       }}>

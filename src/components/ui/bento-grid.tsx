@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 // import dynamic from 'next/dynamic';
-import Lottie from 'react-lottie';
-import animationData from '@/data/confetti.json';
+// import Lottie from 'react-lottie';
+// import animationData from '@/data/confetti.json';
 import MagicButton from './magic-button';
 import { GlowingStars } from './glowing-stars';
 import { EvervaultCard } from './evervault-card';
@@ -58,14 +58,14 @@ export const BentoGridItem = ({
   const leftStackList = ['Typescript', 'Python', 'Swift'];
   const rightStackList = ['Solidity', 'Rust', 'Javascript'];
 
-  const confettiOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  // const confettiOptions = {
+  //   loop: copied,
+  //   autoplay: copied,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice',
+  //   },
+  // };
 
   const handleCopy = () => {
     const email = 'anthony.merino@icloud.com';
@@ -160,11 +160,11 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className={'mt-5 relative'}>
               <div className={`absolute -bottom-5 right-0 block`}>
-                <Lottie
+                {/* <Lottie
                   options={confettiOptions}
                   height={200}
                   width={400}
-                />
+                /> */}
               </div>
               <MagicButton
                 title={copied ? 'You Got It!' : 'Grab My Email'}
