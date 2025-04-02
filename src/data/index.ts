@@ -191,7 +191,7 @@ export const projectItems = [
   },
   {
     id: 7,
-    title: 'Bashful Elephant: Design It. Wear It.',
+    title: 'VirtualStitch: Design it. Wear it. Virtually perfect.',
     des: 'Turn your ideas into wearable art! Describe your vision, and let AI craft stunning designs applied to 3D t-shirt models—your style, your way.',
     img: '/bashful-elephant.webp',
     icons: ['/next.svg', '/tail.svg', '/ts.svg', '/openai.webp', '/three.svg'],
