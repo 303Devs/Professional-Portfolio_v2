@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-// import dynamic from 'next/dynamic';
 // import Lottie from 'react-lottie';
 // import animationData from '@/data/confetti.json';
 import MagicButton from './magic-button';
@@ -11,10 +10,10 @@ import { GlowingStars } from './glowing-stars';
 import { EvervaultCard } from './evervault-card';
 import { BackgroundGradient } from './gradient-bg';
 import { BackgroundBeams } from './beams-bg';
-// import { mapDots } from '@/data';
+import { mapDots } from '@/data';
+import { WorldMap } from './world-map'
 import { IoCopyOutline } from 'react-icons/io5';
 
-// const Map = dynamic(() => import('./world-map'), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -107,7 +106,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {/* {id === 2 && <Map dots={mapDots} />} */}
+        {id === 2 && <WorldMap dots={mapDots} />}
         {id === 3 && <EvervaultCard className='absolute' />}
         {id === 4 && <GlowingStars className='absolute z-10' />}
         {id === 5 && (

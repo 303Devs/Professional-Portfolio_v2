@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 
 export const BackgroundGradient = ({
-  gradientBackgroundStart = 'rgb(108, 0, 162)',
+  gradientBackgroundStart = 'rgb(152, 0, 252)',
   gradientBackgroundEnd = 'rgb(0, 17, 82)',
   firstColor = '18, 113, 255',
   secondColor = '221, 74, 255',
