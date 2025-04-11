@@ -3,6 +3,7 @@
 /.next
 /public
 /.vscode
+.prettierrc
 
 # Ignore generated or unnecessary files
 next-env.d.ts
