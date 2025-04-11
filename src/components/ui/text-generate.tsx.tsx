@@ -37,7 +37,7 @@ export const TextGenerate = ({
           <div key={lineIdx} className='inline-block w-full'>
             {line.split(' ').map((word, wordIdx) => {
               const globalIdx = lineIdx * 10 + wordIdx;
-              const isHighlighted = globalIdx % 6 === 0;
+              const isHighlighted = globalIdx % 5.5 === 0;
 
               return (
                 <motion.span
