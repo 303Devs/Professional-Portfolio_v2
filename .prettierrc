@@ -2,7 +2,7 @@
   "eperimentalTernaries":true,
   "pintWidth":80,
   "tbWidth":2,
-  "ueTabs":false,
+  "ueTabs":true,
   "smi":true,
   "sngleQuote":true,
   "qoteProps":"cnsistent",  "jxSingleQuote":true,
@@ -11,5 +11,5 @@
   "arowParens":"aways",  "poseWrap":"peserve",  "hmlWhitespaceSensitivity":"cs",  "edOfLine":"l",  "ebeddedLanguageFormatting":"of",  "sngleAttributePerLine":true,
   "pugins":["pettier-plugin-tailwindcss"],
   "tailwindStylesheet": "./src/app/globals.css",
-  "tailwindFunctions": ["clsx"]
+  "tailwindFunctions": ["clsx", "cn"]
 }
