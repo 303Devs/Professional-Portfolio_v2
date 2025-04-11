@@ -143,12 +143,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📸 Screenshots
 
-![Portfolio Homepage](/public/Screenshot%202025-04-11%20at%203.18.45%20AM.png)
+![Portfolio Homepage](/Screenshot%202025-04-11%20at%203.18.45%20AM.png)
 
-![Projects Section](/public/Screenshot%202025-04-11%20at%203.19.15%20AM.png)
+![Projects Section](/Screenshot%202025-04-11%20at%203.19.15%20AM.png)
 
-![Interactive Features](/public/Screenshot%202025-04-11%20at%203.20.01%20AM.png)
+![Interactive Features](/Screenshot%202025-04-11%20at%203.20.01%20AM.png)
 
-![Contact Section](/public/Screenshot%202025-04-11%20at%203.20.17%20AM.png)
+![Contact Section](/Screenshot%202025-04-11%20at%203.20.17%20AM.png)
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
