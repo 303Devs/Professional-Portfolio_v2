@@ -10,8 +10,8 @@ const redHat = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Anthony Merino's Profile",
-  description: 'Home of 303Dev Projects',
+  title: "303Devs",
+  description: 'A Colorado studio making tech personal.',
 };
 
 export default function RootLayout({

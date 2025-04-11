@@ -67,7 +67,7 @@ export const BentoGridItem = ({
   // };
 
   const handleCopy = () => {
-    const email = 'anthony.merino@icloud.com';
+    const email = 'anthony@303devs.com';
     navigator.clipboard.writeText(email);
     setCopied(true);
   };
@@ -88,8 +88,8 @@ export const BentoGridItem = ({
             <Image
               src={img}
               alt={img}
-              width={200}
-              height={200}
+              width={1792}
+              height={1024}
               className={cn(imgClassName, 'object-cover object-center')}
             />
           )}
