@@ -28,8 +28,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: 'My Stacks',
-    description: 'Always learning, always improving.',
+    title: 'Our Services',
+    description: 'Good work feels calm, not chaotic.',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
     imgClassName: '',
     titleClassName: 'justify-center',
@@ -49,8 +49,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: 'Creating Tomorrow’s Web3 Ecosystem, Powered by Base',
-    description: 'My Master Plan',
+    title: 'Build thoughtful digital solutions that move people and ideas forward.',
+    description: 'Our Master Plan',
     className: 'md:col-span-3 md:row-span-2',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60 z-10',
     titleClassName: 'justify-center md:justify-start lg:justify-center',

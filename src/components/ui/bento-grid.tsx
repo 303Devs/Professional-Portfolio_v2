@@ -55,8 +55,8 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const leftStackList = ['Typescript', 'Python', 'Swift'];
-  const rightStackList = ['Solidity', 'Rust', 'Javascript'];
+  const leftStackList = ['Development', 'DevOps', 'Web3'];
+  const rightStackList = ['Architecture', 'Consulting', 'Design'];
 
   // const confettiOptions = {
   //   loop: copied,
@@ -123,7 +123,7 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 pg-purple-900'
+            'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10'
           )}>
           <div className='font-sans font-extralight text-neutral-50 text-sm md:text-xs lg:text-base z-10 md:max-w-32'>
             {description}
@@ -143,10 +143,10 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-                <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-purple-900'></span>
+                <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center'></span>
               </div>
               <div className='flex flex-col gap-3 lg:gap-7'>
-                <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-purple-900'></span>
+                <span className='lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center'></span>
                 {rightStackList.map((item, i) => (
                   <span
                     key={`${item}-${i}`}
@@ -170,7 +170,6 @@ export const BentoGridItem = ({
                 title={copied ? 'You Got It!' : 'Grab My Email'}
                 icon={<IoCopyOutline />}
                 position='left'
-                otherClasses='bg-purple-900'
                 handleClick={handleCopy}
               />
             </div>

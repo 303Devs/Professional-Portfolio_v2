@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect } from 'react';
 import { motion, stagger, useAnimate } from 'motion/react';
 import { cn } from '@/lib/utils';
@@ -11,32 +12,53 @@ export const TextGenerate = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  const wordsArray = words.split(' ');
+
   useEffect(() => {
+    const spans = scope.current?.querySelectorAll('span');
+    if (!spans) return;
+
     animate(
-      'span',
+      spans,
+      { opacity: 1, scale: 1 },
       {
-        opacity: 1,
-      },
-      {
-        duration: 2,
-        delay: stagger(0.2),
+        duration: 0.6,
+        delay: stagger(0.1),
+        ease: 'easeOut', // ✅ Correct value for @motion.dev/react
       }
     );
-  }, [animate]);
+  }, [animate, scope]);
 
   const renderWords = () => {
+    const lines = words.split('\n');
+
     return (
       <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className={`${idx > 2 ? 'text-purple-100' : 'dark:text-neutral-50 text-neutral-950'} opacity-0`}>
-              {word}{' '}
-            </motion.span>
-          );
-        })}
+        {lines.map((line, lineIdx) => (
+          <div key={lineIdx} className='inline-block w-full'>
+            {line.split(' ').map((word, wordIdx) => {
+              const globalIdx = lineIdx * 10 + wordIdx;
+              const isHighlighted = globalIdx % 6 === 0;
+
+              return (
+                <motion.span
+                  key={`${word}-${lineIdx}-${wordIdx}`}
+                  className={cn(
+                    'inline-block opacity-0 mr-[0.25em]',
+                    isHighlighted
+                      ? 'text-purple-400 dark:text-purple-400'
+                      : 'dark:text-neutral-50 text-neutral-950'
+                  )}
+                  style={{
+                    transform: 'scale(0.95)',
+                    transformOrigin: 'bottom center',
+                  }}
+                >
+                  {word}
+                </motion.span>
+              );
+            })}
+          </div>
+        ))}
       </motion.div>
     );
   };
@@ -44,7 +66,7 @@ export const TextGenerate = ({
   return (
     <div className={cn('font-bold', className)}>
       <div className='my-4'>
-        <div className=' dark:text-white text-black leading-snug tracking-wide'>
+        <div className='dark:text-white text-black leading-snug tracking-wide'>
           {renderWords()}
         </div>
       </div>
