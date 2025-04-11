@@ -32,7 +32,7 @@ export const gridItems = [
     description: 'Good work feels calm, not chaotic.',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
     imgClassName: '',
-    titleClassName: 'justify-center',
+    titleClassName: '',
     img: '',
     spareImg: '',
   },

@@ -45,7 +45,7 @@ export const TextGenerate = ({
                   className={cn(
                     'inline-block opacity-0 mr-[0.25em]',
                     isHighlighted
-                      ? 'text-purple-400 dark:text-purple-400'
+                      ? 'text-purple-main dark:text-purple-main'
                       : 'dark:text-neutral-50 text-neutral-950'
                   )}
                   style={{
