@@ -2,12 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import PinContainer from './ui/3d-pin';
 import { projectItems } from '@/data';
-import dynamic from 'next/dynamic'; // Ensure dynamic import for browser-specific components
 import { FaLocationArrow } from 'react-icons/fa';
 
-// Dynamically import PinContainer with SSR disabled
-const PinContainer = dynamic(() => import('./ui/3d-pin'), { ssr: false });
 
 // Assuming dynamic data or browser-dependent features
 const RecentProjects = () => {
