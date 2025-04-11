@@ -92,6 +92,8 @@ src/
 
 ### Motion & Animation
 
+<<<<<<< HEAD
+
 - Framer Motion page transitions
 - Custom Vortex particle system
 - 3D hover effects
@@ -140,3 +142,27 @@ src/
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📸 Screenshots
+
+![Screenshot 1](/screenshots/Screenshot%202025-04-11%20at%203.18.45%20AM.png)
+
+![Screenshot 2](/screenshots/Screenshot%202025-04-11%20at%203.19.15%20AM.png)
+
+![Screenshot 3](/screenshots/Screenshot%202025-04-11%20at%203.20.01%20AM.png)
+
+# ![Screenshot 4](/screenshots/Screenshot%202025-04-11%20at%203.20.17%20AM.png)
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Screenshots
+
+![Screenshot 1](/public/Screenshot%202025-04-11%20at%203.18.45%20AM.png)
+
+![Screenshot 2](/public/Screenshot%202025-04-11%20at%203.19.15%20AM.png)
+
+![Screenshot 3](/public/Screenshot%202025-04-11%20at%203.20.01%20AM.png)
+
+![Screenshot 4](/public/Screenshot%202025-04-11%20at%203.20.17%20AM.png)
+
+> > > > > > > e51eaf1 (Assistant checkpoint: Added screenshots to README.md)
