@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professional Portfolio - Modern Web Experience
 
-## Getting Started
+[![React](https://img.shields.io/badge/React-19.0.0-blue.svg)](https://reactjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black.svg)](https://nextjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.1-38B2AC.svg)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-007ACC.svg)](https://www.typescriptlang.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0.0-ff69b4.svg)](https://www.framer.com/motion/)
 
-First, run the development server:
+A cutting-edge portfolio website built with Next.js, featuring dynamic animations, 3D effects, and responsive design. Showcases modern web development practices with a focus on performance and user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- 🎨 Stunning UI with custom animations using Framer Motion
+- 🌓 Dark mode support with `next-themes`
+- 🎭 Interactive 3D elements with custom Pin container
+- 📱 Fully responsive design across all devices
+- ⚡ Optimized performance with Next.js 15
+- 🎯 SEO optimized
+- 🔄 Dynamic project showcases
+- 🌊 Custom Vortex animation with Simplex Noise
+- 🎆 Floating navigation with smooth scrolling
+- ✨ Glowing stars effect
+- 🗺️ Interactive world map
+- 🔲 Bento grid layout system
+
+## 🛠️ Tech Stack
+
+### Core
+
+- **Framework**: Next.js 15.2.4
+- **Language**: TypeScript 5.0
+- **Styling**: TailwindCSS 4.1.1
+- **Motion**: Framer Motion 12.0
+- **State Management**: React Hooks
+- **Animations**: Motion/React + Custom Components
+
+### UI Components & Libraries
+
+- Custom 3D Pin container
+- Spotlight effects
+- Bento grid system
+- Text generation effects
+- Simplex Noise for particle systems
+- CLSX for conditional styling
+- TailwindMerge for style composition
+- Next-themes for dark mode
+- React Icons
+- React Lottie
+
+### Development Tools
+
+- ESLint 9.23.0
+- Prettier 3.4.1
+- PostCSS 8
+- TailwindCSS Animate
+- TypeScript ESLint
+
+## 📦 Project Structure
+
+```
+src/
+├── app/              # Next.js app directory
+├── components/       # React components
+│   ├── ui/          # Reusable UI components
+│   └── features/    # Feature components
+├── data/            # Static data and types
+└── lib/             # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Start Development Server**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+   Access the site at `http://0.0.0.0:3000`
 
-To learn more about Next.js, take a look at the following resources:
+2. **Build for Production**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run build
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run Production Server**
+   ```bash
+   npm start
+   ```
 
-## Deploy on Vercel
+## 🎯 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Motion & Animation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Framer Motion page transitions
+- Custom Vortex particle system
+- 3D hover effects
+- Text generation animations
+- Glowing stars effect
+- Interactive world map
+
+### UI Components
+
+- Responsive Bento grid
+- Dynamic project cards
+- Floating navigation
+- Magic button effects
+- Spotlight component
+- Gradient backgrounds
+
+## 🎨 Design System
+
+### Colors
+
+- Primary Purple: `#9300F3`
+- Secondary Blue: `#A5E1FF`
+- Accent Blue: `#62D0FF`
+- Dark Background: `#0C081D`
+
+### Typography
+
+- Next.js optimized fonts
+- Responsive text scaling
+- Custom text animations
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 20+
+- npm/yarn
+
+### Code Quality
+
+- TypeScript strict mode
+- ESLint configuration
+- Prettier formatting
+- PostCSS processing
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
