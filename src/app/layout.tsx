@@ -10,7 +10,7 @@ const redHat = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
-  title: "303Devs",
+  title: '303Devs',
   description: 'A Colorado studio making tech personal.',
 };
 

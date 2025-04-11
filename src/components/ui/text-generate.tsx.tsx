@@ -34,7 +34,9 @@ export const TextGenerate = ({
     return (
       <motion.div ref={scope}>
         {lines.map((line, lineIdx) => (
-          <div key={lineIdx} className='inline-block w-full'>
+          <div
+            key={lineIdx}
+            className='inline-block w-full'>
             {line.split(' ').map((word, wordIdx) => {
               const globalIdx = lineIdx * 10 + wordIdx;
               const isHighlighted = globalIdx % 5.5 === 0;
@@ -44,15 +46,14 @@ export const TextGenerate = ({
                   key={`${word}-${lineIdx}-${wordIdx}`}
                   className={cn(
                     'inline-block opacity-0 mr-[0.25em]',
-                    isHighlighted
-                      ? 'text-purple-main dark:text-purple-main'
-                      : 'dark:text-neutral-50 text-neutral-950'
+                    isHighlighted ?
+                      'text-purple-main dark:text-purple-main'
+                    : 'dark:text-neutral-50 text-neutral-950'
                   )}
                   style={{
                     transform: 'scale(0.95)',
                     transformOrigin: 'bottom center',
-                  }}
-                >
+                  }}>
                   {word}
                 </motion.span>
               );

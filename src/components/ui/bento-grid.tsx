@@ -11,9 +11,8 @@ import { EvervaultCard } from './evervault-card';
 import { BackgroundGradient } from './gradient-bg';
 import { BackgroundBeams } from './beams-bg';
 import { mapDots } from '@/data';
-import { WorldMap } from './world-map'
+import { WorldMap } from './world-map';
 import { IoCopyOutline } from 'react-icons/io5';
-
 
 export const BentoGrid = ({
   className,

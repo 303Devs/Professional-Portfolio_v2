@@ -6,7 +6,6 @@ import PinContainer from './ui/3d-pin';
 import { projectItems } from '@/data';
 import { FaLocationArrow } from 'react-icons/fa';
 
-
 // Assuming dynamic data or browser-dependent features
 const RecentProjects = () => {
   const [projects, setProjects] = useState<Project[]>([]);

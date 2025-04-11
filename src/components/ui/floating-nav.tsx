@@ -59,13 +59,12 @@ const FloatingNav = ({
           'flex justify-center items-center max-w-fit min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-8 py-5 rounded-xl border border-neutral-950/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-transparent backdrop-blur-lg backdrop-saturate-150 text-neutral-50 space-x-4',
           className
         )}>
-        
         <Image
-          src="/emblem.svg"
-          alt="303Devs Logo"
+          src='/emblem.svg'
+          alt='303Devs Logo'
           width={40}
           height={40}
-          className="px-1 hidden sm:block bg-transparent"
+          className='px-1 hidden sm:block bg-transparent'
         />
 
         {navItems.map(
