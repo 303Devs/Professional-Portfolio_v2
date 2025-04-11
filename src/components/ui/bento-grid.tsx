@@ -141,15 +141,14 @@ export const BentoGridItem = ({
                 {leftStackList.map((item, i) => (
                   <span
                     key={i}
-                    className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus: focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
+                    className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center"></span>
               </div>
-              <div className="flex flex-col gap-3 lg:gap-7">
-                <span className="lg:py-2 lg:px-3 py-4 px-3  rounded-lg text-center"></span>
+              <div className="flex flex-col gap-3 lg:gap-7 -mt-6 lg:-mt-10">
+                {/* offset right column upward */}
                 {rightStackList.map((item, i) => (
                   <span
                     key={`${item}-${i}`}
