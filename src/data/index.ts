@@ -176,7 +176,7 @@ export const projectItems = [
       '/re.svg',
       '/redis.webp',
       '/nginx.webp',
-      '/javascript.svg',
+      '/javascript.webp',
       '/mongodb.webp',
     ],
     link: 'https://anthonymerino.dev',
