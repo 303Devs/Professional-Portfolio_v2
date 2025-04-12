@@ -28,10 +28,8 @@ export const gridItems = [
 	},
 	{
 		id: 3,
-		title: '',
-		description: '',
-		// title: 'Our Services',
-		// description: 'Good work feels calm, not chaotic.',
+		title: 'Our Services',
+		description: 'Good work feels calm, not chaotic.',
 		className: 'lg:col-span-2 md:col-span-3 md:row-span-2',
 		imgClassName: '',
 		titleClassName: '',
