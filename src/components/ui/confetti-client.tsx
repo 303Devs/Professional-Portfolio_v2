@@ -3,12 +3,13 @@
 import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import animationData from "@/data/confetti.json";
+import { LottieRefCurrentProps } from "lottie-react";
 
 // Dynamically import lottie-react on the client only
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Confetti({ copied }: { copied: boolean }) {
-  const lottieRef = useRef<any>(null);
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   useEffect(() => {
     if (copied) {
