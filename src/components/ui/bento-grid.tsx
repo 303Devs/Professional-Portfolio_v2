@@ -76,7 +76,7 @@ export const BentoGridItem = ({
           <Image
             src={img}
             alt="Bento background"
-            width={1792}
+            width={1024}
             height={1024}
             className={cn(
               imgClassName,
