@@ -49,13 +49,14 @@ const Hero = () => {
 							words={'Inspired Solutions,\nLasting Impressions.'}
 						/>
 
-						<p className='mt-6 mb-10 flex flex-wrap items-center justify-center gap-2 text-lg font-medium tracking-wide md:mt-8 md:text-xl lg:text-2xl'>
+						<p className='mt-6 mb-10 flex max-w-full flex-wrap items-center justify-center gap-2 text-lg font-medium tracking-wide md:mt-8 md:text-xl lg:text-2xl'>
 							We’re
 							<Image
 								src={Logo}
-								alt='303Devs company logo'
-								className='inline-block h-[2.5em] w-auto pb-[0.6em]'
+								alt='303Devs - Colorado-based web, mobile, and software development studio'
+								className='inline-block h-[2.25em] w-auto pb-[0.4em]'
 								priority
+								role='img'
 							/>
 							— a Colorado studio making tech personal.
 						</p>
