@@ -1,357 +1,177 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
-import { IoCopyOutline } from "react-icons/io5";
+import { useState } from 'react';
+import Image from 'next/image';
+import { IoCopyOutline } from 'react-icons/io5';
 
-import { cn } from "@/lib/utils";
-import MagicButton from "./magic-button";
-import { GlowingStars } from "./glowing-stars";
-import { EvervaultCard } from "./evervault-card";
-import { BackgroundGradient } from "./gradient-bg";
-import { BackgroundBeams } from "./beams-bg";
-import { mapDots } from "@/data";
-import { WorldMap } from "./world-map";
-import Confetti from "./confetti-client";
+import { cn } from '@/lib/utils';
+import MagicButton from './magic-button';
+import { GlowingStars } from './glowing-stars';
+import { EvervaultCard } from './evervault-card';
+import { BackgroundGradient } from './gradient-bg';
+import { BackgroundBeams } from './beams-bg';
+import { mapDots } from '@/data';
+import { WorldMap } from './world-map';
+import Confetti from './confetti-client';
+
 export const BentoGrid = ({
-  className,
-  children,
+	className,
+	children,
 }: {
-  className?: string;
-  children?: React.ReactNode;
+	className?: string;
+	children?: React.ReactNode;
 }) => (
-  <div
-    className={cn(
-      "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
-      className,
-    )}
-  >
-    {children}
-  </div>
+	<div
+		className={cn(
+			'md:grid-row-7 mx-auto grid grid-cols-1 gap-4 md:grid-cols-6 lg:grid-cols-5 lg:gap-8',
+			className
+		)}>
+		{children}
+	</div>
 );
 
-export const BentoGridItem = ({
-  id,
-  className,
-  title,
-  description,
-  img,
-  imgClassName,
-  titleClassName,
-  spareImg,
-}: {
-  className?: string;
-  id: number;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  img?: string;
-  imgClassName?: string;
-  titleClassName?: string;
-  spareImg?: string;
-}) => {
-  const [copied, setCopied] = useState(false);
-
-  const leftStackList = ["Development", "DevOps", "Web3"];
-  const rightStackList = ["Architecture", "Consulting", "Design"];
-
-  const handleCopy = () => {
-    const email = "anthony@303devs.com";
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-  };
-
-  return (
-    <div
-      className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-neutral-800",
-        className,
-      )}
-      style={{
-        background: "rgb(4,7,29)",
-        backgroundColor: "linear-gradient(145deg, #4A3B87, #1E1648)",
-      }}
-    >
-      <div className={cn({ "flex justify-center": id === 6 }, "h-full")}>
-        {img && (
-          <Image
-            src={img}
-            alt="Bento background"
-            width={1024}
-            height={1024}
-            className={cn(
-              imgClassName,
-              "absolute w-full h-full object-cover object-center",
-            )}
-          />
-        )}
-
-        {spareImg && id === 5 && (
-          <Image
-            src={spareImg}
-            alt="Bento spare"
-            width={200}
-            height={200}
-            className="absolute right-0 -bottom-5 w-full h-full object-cover object-center opacity-80"
-          />
-        )}
-
-        {id === 2 && <WorldMap dots={mapDots} />}
-        {id === 3 && <EvervaultCard className="absolute" />}
-        {id === 4 && <GlowingStars className="absolute z-10" />}
-        {id === 5 && (
-          <BackgroundBeams className="absolute max-h-full bg-transparent ">
-            {""}
-          </BackgroundBeams>
-        )}
-
-        {id === 6 && (
-          <BackgroundGradient>
-            <div className="absolute z-50 inset-0 flex items-center justify-center font-bold lg:font-semibold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-6xl" />
-          </BackgroundGradient>
-        )}
-
-        <div
-          className={cn(
-            titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
-          )}
-        >
-          <div className="font-sans font-extralight text-neutral-50 text-sm md:text-xs lg:text-base z-10 md:max-w-32">
-            {description}
-          </div>
-
-          <div className="font-sans font-bold lg:font-semibold text-lg lg:text-3xl max-w-96 z-10">
-            {title}
-          </div>
-
-          {id === 3 && (
-            <div className="flex gap-1 lg:gap-4 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-7">
-                {leftStackList.map((item, i) => (
-                  <span
-                    key={i}
-                    className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col gap-3 lg:gap-7 -mt-6 lg:-mt-10">
-                {rightStackList.map((item, i) => (
-                  <span
-                    key={`${item}-${i}`}
-                    className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus:outline-hidden focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {id === 6 && (
-            <div className="mt-5 relative">
-              <div className="absolute -bottom-5 right-0">
-                <Confetti copied={copied} />
-              </div>
-              <MagicButton
-                title={copied ? "You Got It!" : "Grab My Email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// "use client";
-
-// import { useState } from "react";
-// import { cn } from "@/lib/utils";
-// import Image from "next/image";
-// import Lottie from 'react-lottie';
-// import animationData from '@/data/confetti.json';
-// import MagicButton from "./magic-button";
-// import { GlowingStars } from "./glowing-stars";
-// import { EvervaultCard } from "./evervault-card";
-// import { BackgroundGradient } from "./gradient-bg";
-// import { BackgroundBeams } from "./beams-bg";
-// import { mapDots } from "@/data";
-// import { WorldMap } from "./world-map";
-// import { IoCopyOutline } from "react-icons/io5";
-
-// export const BentoGrid = ({
-//   className,
-//   children,
-// }: {
-//   className?: string;
-//   children?: React.ReactNode;
-// }) => {
-//   return (
-//     <div
-//       className={cn(
-//         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
-//         className,
-//       )}
-//     >
-//       {children}
-//     </div>
-//   );
-// };
-
-// export const BentoGridItem = ({
-//   id,
-//   className,
-//   title,
-//   description,
-//   img,
-//   imgClassName,
-//   titleClassName,
-//   spareImg,
-// }: {
-//   className?: string;
-//   id: number;
-//   title?: string | React.ReactNode;
-//   description?: string | React.ReactNode;
-//   img?: string;
-//   imgClassName?: string;
-//   titleClassName?: string;
-//   spareImg?: string;
-// }) => {
-//   const [copied, setCopied] = useState(false);
-
-//   const leftStackList = ["Development", "DevOps", "Web3"];
-//   const rightStackList = ["Architecture", "Consulting", "Design"];
-
-// const confettiOptions = {
-//   loop: copied,
-//   autoplay: copied,
-//   animationData: animationData,
-//   rendererSettings: {
-//     preserveAspectRatio: 'xMidYMid slice',
-//   },
-// };
-
-//   const handleCopy = () => {
-//     const email = "anthony@303devs.com";
-//     navigator.clipboard.writeText(email);
-//     setCopied(true);
-//   };
-
-//   return (
-//     <div
-//       className={cn(
-//         "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-neutral-800",
-//         className,
-//       )}
-//       style={{
-//         background: "rgb(4,7,29)",
-//         backgroundColor: "linear-gradient(145deg, #4A3B87, #1E1648)",
-//       }}
-//     >
-//       <div className={`${id === 6 && "flex justify-center"} h-full`}>
-//         <div className="w-full h-full absolute">
-//           {img && (
-//             <Image
-//               src={img}
-//               alt={img}
-//               width={1792}
-//               height={1024}
-//               className={cn(imgClassName, "object-cover object-center")}
-//             />
-//           )}
-//         </div>
-//         <div
-//           className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"}`}
-//         >
-//           {spareImg && (
-//             <Image
-//               src={spareImg}
-//               alt={spareImg}
-//               width={200}
-//               height={200}
-//               className="object-cover object-center w-full h-full"
-//             />
-//           )}
-//         </div>
-//         {id === 2 && <WorldMap dots={mapDots} />}
-//         {id === 3 && <EvervaultCard className="absolute" />}
-//         {id === 4 && <GlowingStars className="absolute z-10" />}
-//         {id === 5 && (
-// <BackgroundBeams className="absolute max-h-full bg-transparent">
-//   {""}
-// </BackgroundBeams>
-//         )}
-//         {id === 6 && (
-//           <BackgroundGradient>
-//             <div className="absolute z-50 inset-0 flex items-center justify-center font-bold lg:font-semibold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-6xl"></div>
-//           </BackgroundGradient>
-//         )}
-//         <div
-//           className={cn(
-//             titleClassName,
-//             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
-//           )}
-//         >
-//           <div className="font-sans font-extralight text-neutral-50 text-sm md:text-xs lg:text-base z-10 md:max-w-32">
-//             {description}
-//           </div>
-//           <div className="font-sans font-bold lg:font-semibold text-lg lg:text-3xl max-w-96 z-10">
-//             {title}
-//           </div>
-
-//           {id === 3 && (
-//             <div className="flex gap-1 lg:gap-4 w-fit absolute -right-3 lg:-right-2">
-//               {/* tech stack lists */}
-//               <div className="flex flex-col gap-3 lg:gap-7">
-//                 {leftStackList.map((item, i) => (
-//                   <span
-//                     key={i}
-//                     className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
-//                   >
-//                     {item}
-//                   </span>
-//                 ))}
-//               </div>
-//               <div className="flex flex-col gap-3 lg:gap-7 -mt-6 lg:-mt-10">
-//                 {/* offset right column upward */}
-//                 {rightStackList.map((item, i) => (
-//                   <span
-//                     key={`${item}-${i}`}
-//                     className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-neutral-800 bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%] px-6 font-medium text-neutral-400 transition-colors focus:outline-hidden focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50"
-//                   >
-//                     {item}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-//           )}
-//           {id === 6 && (
-//             <div className={"mt-5 relative"}>
-//               <div className={`absolute -bottom-5 right-0 block`}>
-{
-  /* <Lottie
-                  options={confettiOptions}
-                  height={200}
-                  width={400}
-                /> */
+interface BentoGridItemProps {
+	id: number;
+	className?: string;
+	title?: string | React.ReactNode;
+	description?: string | React.ReactNode;
+	img?: string;
+	imgClassName?: string;
+	titleClassName?: string;
+	spareImg?: string;
 }
-//               </div>
-//               <MagicButton
-//                 title={copied ? "You Got It!" : "Grab My Email"}
-//                 icon={<IoCopyOutline />}
-//                 position="left"
-//                 handleClick={handleCopy}
-//               />
-//             </div>
-//           )}
-//         </div>
-//         x
-//       </div>
-//     </div>
-//   );
-// };
+
+export const BentoGridItem = ({
+	id,
+	className,
+	title,
+	description,
+	img,
+	imgClassName,
+	titleClassName,
+	spareImg,
+}: BentoGridItemProps) => {
+	const [copied, setCopied] = useState(false);
+
+	const leftStackList = ['Development', 'DevOps', 'Web3'];
+	const rightStackList = ['Architecture', 'Consulting', 'Design'];
+
+	const handleCopy = () => {
+		navigator.clipboard.writeText('anthony@303devs.com');
+		setCopied(true);
+	};
+
+	return (
+		<div
+			className={cn(
+				'group/bento relative row-span-1 flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-border shadow transition duration-200 hover:shadow-xl dark:shadow-none',
+				'bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] text-foreground dark:bg-[linear-gradient(145deg,#0C081D,#1A1F2E)]',
+				className
+			)}>
+			<div className={cn({ 'flex justify-center': id === 6 }, 'h-full')}>
+				{img && (
+					<div className='absolute inset-0'>
+						<Image
+							src={img}
+							alt='Bento background'
+							fill
+							className={cn(imgClassName, 'object-cover object-center')}
+						/>
+					</div>
+				)}
+
+				{spareImg && id === 5 && (
+					<Image
+						src={spareImg}
+						alt='Bento spare'
+						width={160}
+						height={160}
+						className='absolute right-2 bottom-2 h-40 w-40 object-contain opacity-70'
+					/>
+				)}
+
+				{id === 2 && <WorldMap dots={mapDots} />}
+				{id === 3 && <EvervaultCard className='absolute' />}
+				{id === 4 && <GlowingStars className='absolute z-10' />}
+				{id === 5 && (
+					<BackgroundBeams className='absolute max-h-full bg-transparent'>
+						{null}
+					</BackgroundBeams>
+				)}
+				{id === 6 && (
+					<BackgroundGradient>
+						<div className='pointer-events-none absolute inset-0 z-50 flex items-center justify-center px-4 text-center text-3xl font-bold md:text-4xl lg:text-6xl lg:font-semibold' />
+					</BackgroundGradient>
+				)}
+
+				<div
+					className={cn(
+						titleClassName,
+						'relative flex min-h-40 flex-col p-5 transition duration-200 group-hover/bento:translate-x-2 md:p-6 lg:p-10'
+					)}>
+					{description && (
+						<div
+							className={cn(
+								'z-10 font-sans text-base font-light md:max-w-32 lg:text-lg',
+								id === 6 || id === 1 ?
+									'text-white drop-shadow-sm'
+								:	'text-foreground'
+							)}>
+							{description}
+						</div>
+					)}
+
+					{title && (
+						<div
+							className={cn(
+								'z-10 max-w-96 font-sans text-2xl font-bold tracking-tight lg:text-4xl lg:font-semibold',
+								id === 6 || id === 1 ?
+									'text-white drop-shadow-md'
+								:	'text-foreground'
+							)}>
+							{title}
+						</div>
+					)}
+
+					{id === 3 && (
+						<div
+							aria-label='Technology stack'
+							className='absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-4'>
+							<div className='flex flex-col gap-3 lg:gap-7'>
+								{leftStackList.map((item, i) => (
+									<span
+										key={i}
+										className='inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-border bg-[linear-gradient(110deg,#F1F2F6,45%,#E0E3F1,55%,#F1F2F6)] bg-[length:200%_100%] px-6 font-medium text-foreground transition-colors focus:ring-2 focus:ring-muted-foreground focus:ring-offset-2 focus:ring-offset-background dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
+										{item}
+									</span>
+								))}
+							</div>
+							<div className='-mt-6 flex flex-col gap-3 sm:-mt-2 lg:-mt-10 lg:gap-7'>
+								{rightStackList.map((item, i) => (
+									<span
+										key={`${item}-${i}`}
+										className='inline-flex h-10 animate-shimmer items-center justify-center rounded-md border border-border bg-[linear-gradient(110deg,#F1F2F6,45%,#E0E3F1,55%,#F1F2F6)] bg-[length:200%_100%] px-6 font-medium text-foreground transition-colors focus:ring-2 focus:ring-muted-foreground focus:ring-offset-2 focus:ring-offset-background focus:outline-hidden dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
+										{item}
+									</span>
+								))}
+							</div>
+						</div>
+					)}
+				</div>
+			</div>
+			{id === 6 && (
+				<div className='relative z-10 mt-6 mb-10 flex justify-center'>
+					<div className='absolute right-0 -bottom-5'>
+						<Confetti copied={copied} />
+					</div>
+					<MagicButton
+						title={copied ? 'You Got It!' : 'Grab My Email'}
+						icon={<IoCopyOutline />}
+						position='left'
+						handleClick={handleCopy}
+					/>
+				</div>
+			)}
+		</div>
+	);
+};
