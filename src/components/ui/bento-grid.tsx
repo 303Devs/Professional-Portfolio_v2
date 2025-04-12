@@ -165,7 +165,7 @@ export const BentoGridItem = ({
 						<Confetti copied={copied} />
 					</div>
 					<MagicButton
-						title={copied ? 'You Got It!' : 'Grab My Email'}
+						title={copied ? 'You Got It!' : 'Grab Our Email'}
 						icon={<IoCopyOutline />}
 						position='left'
 						handleClick={handleCopy}
