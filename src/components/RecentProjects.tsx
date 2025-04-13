@@ -29,7 +29,7 @@ const RecentProjects = () => {
 			<h1 className='heading'>
 				A Selection of <span className='text-purple-100'>Recent Projects</span>
 			</h1>
-			<ul className='mt-10 flex flex-wrap items-center justify-center gap-x-24 gap-y-10 p-4'>
+			<ul className='mt-10 flex flex-wrap items-center justify-center gap-x-24 gap-y-6 p-4'>
 				{projects.map((project) => (
 					<li
 						key={project.id}
