@@ -25,20 +25,20 @@ const RecentProjects = () => {
 	return (
 		<section
 			id='projects'
-			className='py-20'>
+			className='pt-12 pb-16'>
 			<h1 className='heading'>
 				A Selection of <span className='text-purple-100'>Recent Projects</span>
 			</h1>
-			<ul className='mt-10 flex flex-wrap items-center justify-center gap-x-24 gap-y-6 p-4'>
+			<ul className='mt-6 grid grid-cols-1 gap-x-8 gap-y-8 px-4 sm:grid-cols-2 xl:gap-y-12'>
 				{projects.map((project) => (
 					<li
 						key={project.id}
-						className='flex h-[32rem] w-full max-w-md items-center justify-center sm:h-[41rem] lg:w-96'>
+						className='flex h-[32rem] w-full max-w-md flex-1 items-center justify-center sm:h-[41rem] sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl'>
 						<PinContainer
 							title={project.link}
 							href={project.link}>
 							<div className='relative mb-10 flex h-[30vh] w-full items-center justify-center overflow-hidden sm:h-[20vh] lg:rounded-3xl'>
-								<div className='relative h-full w-full overflow-hidden bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)] bg-[length:200%_100%]'>
+								<div className='relative h-full w-full overflow-hidden bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
 									<Image
 										src='/bg.png'
 										alt='Background Image'
@@ -55,11 +55,11 @@ const RecentProjects = () => {
 									height={384}
 								/>
 							</div>
-							<h2 className='line-clamp-1 text-base font-semibold text-neutral-50 lg:text-xl'>
+							<h2 className='line-clamp-1 text-base font-semibold text-neutral-900 lg:text-xl dark:text-neutral-50'>
 								{project.title}
 							</h2>
 							<p
-								className='line-clamp-3 text-sm font-light text-neutral-400 lg:text-xl lg:font-normal'
+								className='line-clamp-3 text-sm font-light text-neutral-700 lg:text-xl lg:font-normal dark:text-neutral-400'
 								style={{
 									margin: '1vh 0',
 								}}>
@@ -85,11 +85,13 @@ const RecentProjects = () => {
 									))}
 								</ul>
 								<div className='flex items-center justify-center gap-2'>
-									<p className='text-xs text-neutral-200 lg:text-sm'>Visit</p>
+									<p className='text-xs text-neutral-800 lg:text-sm dark:text-neutral-200'>
+										Visit
+									</p>
 									<Image
 										src={emblem}
 										alt='Emblem'
-										className='ms-3'
+										className='ms-3 mr-2'
 										width={25}
 										height={25}
 									/>
