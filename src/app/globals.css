@@ -189,7 +189,7 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 98%;
+		--background: 240 20% 98%;
 		--foreground: 240 10% 3.9%;
 		--primary: 276 100% 48%; /* purple-main */
 		--primary-foreground: 0 0% 100%;
@@ -228,10 +228,10 @@
 
 @layer base {
 	* {
-		@apply border-border scroll-smooth!;
+		@apply scroll-smooth! border-border;
 	}
 	body {
-		@apply bg-background text-foreground min-h-screen;
+		@apply min-h-screen bg-background text-foreground;
 	}
 	button {
 		@apply active:outline-hidden;
