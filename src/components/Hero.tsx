@@ -6,7 +6,8 @@ import { Spotlight } from './ui/Spotlight';
 import { TextGenerate } from './ui/text-generate.tsx';
 import { Vortex } from './ui/vortex';
 
-import Logo from '../../public/logo-horz-trans.svg';
+import LogoDark from '../../public/logo-horz-trans.svg';
+import LogoLight from '../../public/hoz-trans-dark.png';
 
 const SPOTLIGHTS = [
 	{
@@ -52,9 +53,16 @@ const Hero = () => {
 						<p className='mt-6 mb-10 flex max-w-full flex-wrap items-center justify-center gap-2 text-lg font-medium tracking-wide md:mt-8 md:text-xl lg:text-2xl'>
 							We’re
 							<Image
-								src={Logo}
+								src={LogoDark}
 								alt='303Devs - Colorado-based web, mobile, and software development studio'
-								className='inline-block h-[2.25em] w-auto pb-[0.4em]'
+								className='hidden h-[2.25em] w-auto pb-[0.4em] dark:inline-block'
+								priority
+								role='img'
+							/>
+							<Image
+								src={LogoLight}
+								alt='303Devs - Colorado-based web, mobile, and software development studio'
+								className='mt-2 inline-block h-[6.5em] w-auto dark:hidden'
 								priority
 								role='img'
 							/>
