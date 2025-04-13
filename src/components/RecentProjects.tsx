@@ -27,7 +27,7 @@ const RecentProjects = () => {
 			id='projects'
 			className='pt-12 pb-16'>
 			<h1 className='heading'>
-				A Selection of <span className='text-purple-100'>Recent Projects</span>
+				A Selection of <span className='text-purple-main'>Recent Projects</span>
 			</h1>
 			<ul className='mt-6 grid grid-cols-1 gap-x-8 gap-y-8 px-4 sm:grid-cols-2 xl:gap-y-12'>
 				{projects.map((project) => (
@@ -37,7 +37,7 @@ const RecentProjects = () => {
 						<PinContainer
 							title={project.link}
 							href={project.link}>
-							<div className='relative mb-10 flex h-[30vh] w-full items-center justify-center overflow-hidden sm:h-[20vh] lg:rounded-3xl'>
+							<div className='w-[80vw relative mb-10 flex h-[30vh] items-center justify-center overflow-hidden sm:h-[20vh] sm:w-96 lg:rounded-3xl'>
 								<div className='relative h-full w-full overflow-hidden bg-[linear-gradient(145deg,#f4f4f7,#e3e3ee)] dark:bg-[linear-gradient(110deg,#0C081D,45%,#1A1F2E,55%,#0C081D)]'>
 									<Image
 										src='/bg.png'
@@ -86,7 +86,7 @@ const RecentProjects = () => {
 								</ul>
 								<div className='flex items-center justify-center gap-2'>
 									<p className='text-xs text-neutral-800 lg:text-sm dark:text-neutral-200'>
-										Visit
+										Visit Site
 									</p>
 									<Image
 										src={emblem}

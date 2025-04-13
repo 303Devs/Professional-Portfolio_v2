@@ -75,6 +75,7 @@ export const BentoGridItem = ({
 							src={img}
 							alt='Bento background'
 							fill
+							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 							className={cn(imgClassName, 'object-cover object-center')}
 						/>
 					</div>
