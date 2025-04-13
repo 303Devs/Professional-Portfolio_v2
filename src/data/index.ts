@@ -145,7 +145,7 @@ export const projectItems = [
 		des: 'Fuel the causes you care about with this Web3-powered crowdsharing platform. Create campaigns, accept donations, and support community-driven dreams with ease.',
 		img: '/civil-protocol.webp',
 		icons: ['/next.svg', '/tail.svg', '/ts.svg', '/solidity.webp', '/eth.webp'],
-		link: 'https://civilprotocol.io',
+		link: 'https://share.civilprotocol.io',
 	},
 	{
 		id: 3,
